@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakhee's Nail Art Studio - Premium Nail Care</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Rakhee's Nail Art Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,629 +13,370 @@
         }
 
         :root {
-            --primary: #5C3D77;
-            --secondary: #B8A0D4;
-            --accent: #E8D6FF;
-            --dark: #2D1B3D;
-            --white: #FFFFFF;
-            --cream: #F9F7FC;
+            --primary: #1a1a1a;
+            --accent: #f4f4f4;
+            --highlight: #d4a5a5;
+            --text: #2c2c2c;
+            --light: #fafafa;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text);
+            background: var(--light);
             line-height: 1.6;
-            color: #333;
             overflow-x: hidden;
-            background: var(--cream);
         }
 
+        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 30px rgba(92, 61, 119, 0.08);
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 300;
-            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-butterfly {
-            font-size: 1.8rem;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 3rem;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--primary);
+            color: var(--text);
             text-decoration: none;
-            font-weight: 400;
             font-size: 0.9rem;
-            letter-spacing: 1px;
-            position: relative;
+            font-weight: 400;
             transition: color 0.3s;
-            text-transform: uppercase;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 1px;
-            background: var(--secondary);
-            transition: width 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--secondary);
+            color: var(--highlight);
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #F9F7FC 0%, #E8D6FF 50%, #F9F7FC 100%);
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #faf8f5 0%, #f5f0eb 100%);
             padding-top: 80px;
-        }
-
-        .hero::before {
-            content: '🦋';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.03;
-            top: 10%;
-            right: 10%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '🦋';
-            position: absolute;
-            font-size: 10rem;
-            opacity: 0.03;
-            bottom: 15%;
-            left: 8%;
-            animation: float 10s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(5deg); }
+            position: relative;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1.2s ease-out;
+            text-align: center;
+            max-width: 900px;
+            padding: 2rem;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content h1 {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--primary);
-            font-weight: 300;
-            line-height: 1.2;
-            letter-spacing: 2px;
-        }
-
-        .hero-content .studio {
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .hero-content p {
-            font-size: 1rem;
-            margin-bottom: 3rem;
-            color: var(--primary);
-            font-weight: 300;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-
-        .cta-button {
-            background: var(--primary);
-            color: var(--white);
-            padding: 1rem 3rem;
-            text-decoration: none;
-            border-radius: 0;
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
             font-weight: 400;
-            font-size: 0.9rem;
-            transition: all 0.4s;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-btn {
             display: inline-block;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border: 2px solid var(--primary);
-            position: relative;
-            overflow: hidden;
+            padding: 1.2rem 3rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 50px;
+            transition: all 0.3s ease;
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--secondary);
-            transition: left 0.4s;
-            z-index: -1;
+        .cta-btn:hover {
+            background: var(--highlight);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
-        .cta-button:hover::before {
-            left: 0;
-        }
-
-        .cta-button:hover {
-            border-color: var(--secondary);
-            color: var(--white);
-        }
-
+        /* Sections */
         section {
-            padding: 6rem 3rem;
+            padding: 8rem 4rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        h2 {
+        .section-header {
             text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
             color: var(--primary);
-            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1rem;
+            color: #888;
             font-weight: 300;
         }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 0.85rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--secondary);
-            margin-bottom: 4rem;
+        /* Services */
+        .services {
+            background: white;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
         }
 
         .service-card {
-            background: var(--white);
-            padding: 3rem 2.5rem;
             text-align: center;
-            transition: all 0.4s;
-            position: relative;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
+            padding: 2rem;
+            transition: transform 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(92, 61, 119, 0.1);
+            transform: translateY(-5px);
         }
 
         .service-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            display: inline-block;
-            transition: transform 0.3s;
-            filter: grayscale(20%);
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
+            display: block;
         }
 
         .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
             color: var(--primary);
             margin-bottom: 1rem;
-            font-size: 1.4rem;
-            font-weight: 500;
-            font-family: 'Cormorant Garamond', serif;
         }
 
         .service-card p {
+            font-size: 0.95rem;
             color: #666;
-            line-height: 1.8;
-            font-size: 0.9rem;
+            line-height: 1.7;
             font-weight: 300;
         }
 
+        /* Gallery */
         .gallery {
-            background: var(--white);
-            padding: 6rem 3rem;
-        }
-
-        .signup-section {
-            padding: 6rem 3rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--accent) 50%, var(--cream) 100%);
-        }
-
-        .signup-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 3rem;
-            box-shadow: 0 10px 40px rgba(92, 61, 119, 0.1);
-            position: relative;
-        }
-
-        .signup-container::before {
-            content: '🦋';
-            position: absolute;
-            font-size: 8rem;
-            opacity: 0.03;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .signup-form {
-            position: relative;
-            z-index: 1;
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--accent);
-            background: var(--cream);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-            color: var(--primary);
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--secondary);
-            background: var(--white);
-        }
-
-        .form-group input::placeholder {
-            color: var(--secondary);
-            opacity: 0.6;
-        }
-
-        .submit-button {
-            width: 100%;
-            background: var(--primary);
-            color: var(--white);
-            padding: 1.2rem;
-            border: 2px solid var(--primary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.4s;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .submit-button:hover {
-            background: transparent;
-            color: var(--primary);
-        }
-
-        .submit-button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .success-message {
-            display: none;
-            padding: 1rem;
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .error-message {
-            display: none;
-            padding: 1rem;
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .logo-section {
-            text-align: center;
-            padding: 4rem 3rem;
-            background: var(--primary);
-        }
-
-        .logo-image {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            opacity: 0.95;
+            background: var(--accent);
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .gallery-item {
-            cursor: pointer;
-            transition: all 0.4s;
             position: relative;
             overflow: hidden;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
+            border-radius: 12px;
+            cursor: pointer;
+            aspect-ratio: 1;
         }
 
         .gallery-image {
             width: 100%;
-            aspect-ratio: 1;
+            height: 100%;
             object-fit: cover;
-            transition: all 0.5s;
-            filter: saturate(0.9);
+            transition: transform 0.5s ease;
         }
 
         .gallery-item:hover .gallery-image {
-            transform: scale(1.05);
-            filter: saturate(1);
+            transform: scale(1.1);
         }
 
         .gallery-label {
-            text-align: center;
-            margin-top: 1.2rem;
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--primary);
-            letter-spacing: 1px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .contact {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-            color: var(--white);
-            padding: 6rem 3rem;
-            margin: 4rem 3rem;
-            position: relative;
-        }
-
-        .contact::before {
-            content: '🦋';
             position: absolute;
-            font-size: 12rem;
-            opacity: 0.05;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.3s;
         }
 
-        .contact h2 {
-            color: var(--white);
+        .gallery-item:hover .gallery-label {
+            transform: translateY(0);
         }
 
-        .contact .section-subtitle {
-            color: var(--accent);
+        /* Contact */
+        .contact {
+            background: var(--primary);
+            color: white;
+            border-radius: 24px;
+            margin: 4rem;
+            padding: 6rem 4rem;
         }
 
-        .contact-info {
+        .contact .section-header h2 {
+            color: white;
+        }
+
+        .contact .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
             text-align: center;
             margin-bottom: 4rem;
-            position: relative;
-            z-index: 1;
         }
 
         .contact-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 1rem;
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-weight: 400;
-            font-family: 'Cormorant Garamond', serif;
+            color: var(--highlight);
         }
 
         .contact-item p {
             font-size: 0.95rem;
-            line-height: 1.8;
             font-weight: 300;
+            line-height: 1.8;
         }
 
-        .map-review-container {
+        .map-review {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 3rem;
             margin-top: 4rem;
-            position: relative;
-            z-index: 1;
         }
 
         .map-container {
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
         .map-container iframe {
             width: 100%;
             height: 450px;
             border: none;
-            filter: grayscale(30%) contrast(1.1);
         }
 
-        .review-container {
+        .review-box {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            padding: 3rem 2.5rem;
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .review-container h3 {
-            color: var(--white);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-            font-weight: 400;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .review-container p {
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .review-button {
-            background: transparent;
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 0.85rem;
-            transition: all 0.3s;
-            display: inline-block;
-            border: 1px solid var(--accent);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .review-button:hover {
-            background: var(--accent);
-            color: var(--primary);
         }
 
         .stars {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            filter: drop-shadow(0 2px 5px rgba(255, 215, 0, 0.3));
         }
 
+        .review-box h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .review-box p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .review-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .review-btn:hover {
+            background: var(--highlight);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
-            background: var(--dark);
-            color: var(--accent);
+            background: white;
             text-align: center;
-            padding: 2.5rem;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            font-weight: 300;
+            padding: 3rem;
+            color: #888;
+            font-size: 0.9rem;
         }
 
+        /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
             bottom: 30px;
             right: 30px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
             border-radius: 50%;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1500;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
             transition: all 0.3s;
-            cursor: pointer;
             text-decoration: none;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
 
         .whatsapp-float::before {
             content: '💬';
         }
 
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -644,117 +385,89 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(45, 27, 61, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             overflow: auto;
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         .modal-content {
-            position: relative;
+            max-width: 1200px;
             margin: 3% auto;
             padding: 3rem;
-            width: 90%;
-            max-width: 1300px;
-            animation: slideIn 0.4s;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            position: relative;
         }
 
         .close {
-            color: var(--accent);
             position: absolute;
             top: 1rem;
             right: 2rem;
             font-size: 3rem;
-            font-weight: 300;
+            color: white;
             cursor: pointer;
-            z-index: 2001;
             transition: all 0.3s;
         }
 
         .close:hover {
             transform: rotate(90deg);
-            color: var(--white);
         }
 
         .modal h2 {
-            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            color: white;
+            text-align: center;
             margin-bottom: 3rem;
-            margin-top: 1rem;
+            font-size: 2.5rem;
         }
 
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .photo-placeholder {
             aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #d4a5a5, #c98f8f);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 0.85rem;
-            padding: 1rem;
+            font-size: 0.9rem;
             text-align: center;
-            transition: all 0.3s;
+            padding: 1rem;
         }
 
-        .photo-placeholder:hover {
-            transform: scale(1.02);
-        }
-
+        /* Responsive */
         @media (max-width: 1024px) {
-            .map-review-container {
+            .map-review {
                 grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
             nav {
-                padding: 0 1.5rem;
+                padding: 1.2rem 1.5rem;
             }
 
             .nav-links {
                 gap: 1.5rem;
-                font-size: 0.75rem;
+                font-size: 0.85rem;
             }
 
-            .hero-content h1 {
-                font-size: 3rem;
+            .hero h1 {
+                font-size: 3.5rem;
             }
 
-            .hero-content p {
-                font-size: 0.8rem;
-                letter-spacing: 2px;
-            }
-
-            h2 {
+            .section-header h2 {
                 font-size: 2.5rem;
             }
 
             section {
-                padding: 4rem 1.5rem;
+                padding: 5rem 1.5rem;
             }
 
-            .services-grid {
+            .services-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -762,35 +475,17 @@
                 margin: 2rem 1.5rem;
                 padding: 4rem 2rem;
             }
-
-            .modal-content {
-                width: 95%;
-                padding: 2rem 1rem;
-            }
-
-            .close {
-                right: 1rem;
-                font-size: 2.5rem;
-            }
-
-            .map-container iframe {
-                height: 300px;
-            }
         }
     </style>
 </head>
 <body>
-    <header id="header">
+    <header>
         <nav>
-            <div class="logo">
-                <span class="logo-butterfly">🦋</span>
-                Rakhee's Nail Art Studio
-            </div>
+            <div class="logo">Rakhee's</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#signup">Sign Up</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -798,114 +493,88 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Rakhee's <span class="studio">Nail Art Studio</span></h1>
-            <p>Elegance in Every Detail</p>
-            <a href="#contact" class="cta-button">Book Your Appointment</a>
+            <h1>Beautiful Nails,<br>Beautifully Done</h1>
+            <p>Premium nail art & care in Kalyan</p>
+            <a href="https://wa.me/919326491223?text=Hi%20Rakhee's%20Nail%20Art%20Studio!%20I%20would%20like%20to%20book%20an%20appointment." class="cta-btn" target="_blank">Book Appointment</a>
         </div>
     </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <p class="section-subtitle">Crafted with Care</p>
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Services</h2>
+            <p>Expert care for your nails</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">✨</div>
+                <span class="service-icon">✨</span>
                 <h3>Gel Nails</h3>
-                <p>Long-lasting gel polish that maintains its shine and stays chip-free for weeks with a flawless, professional finish</p>
+                <p>Long-lasting gel polish that stays chip-free and shiny for weeks</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💎</div>
-                <h3>Nail Art Design</h3>
-                <p>Custom artistic designs featuring crystals, intricate patterns, and creative embellishments tailored to your unique style</p>
+                <span class="service-icon">💎</span>
+                <h3>Nail Art</h3>
+                <p>Custom designs with crystals, patterns, and creative details</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💫</div>
-                <h3>Acrylic Extensions</h3>
-                <p>Beautiful nail extensions with custom acrylic application, shaped to perfection for added length and strength</p>
+                <span class="service-icon">💫</span>
+                <h3>Acrylics</h3>
+                <p>Beautiful extensions shaped to perfection for added length</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💅</div>
+                <span class="service-icon">💅</span>
                 <h3>Press-Ons</h3>
-                <p>Convenient and stylish press-on nails with professional application for instant glamour without the wait</p>
+                <p>Stylish instant nails with professional application</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🌟</div>
+                <span class="service-icon">🌟</span>
                 <h3>Gel-X</h3>
-                <p>Revolutionary soft gel extension system for natural-looking, flexible, and damage-free nail enhancements</p>
+                <p>Soft gel extensions for natural-looking, flexible nails</p>
             </div>
         </div>
     </section>
 
     <section id="gallery" class="gallery">
-        <h2>Our Work</h2>
-        <p class="section-subtitle">A Gallery of Beauty</p>
+        <div class="section-header">
+            <h2>Our Work</h2>
+            <p>See what we create</p>
+        </div>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openGallery('French Tips')">
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=400&fit=crop" alt="French Tips" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop" alt="French Tips" class="gallery-image">
                 <div class="gallery-label">French Tips</div>
             </div>
             <div class="gallery-item" onclick="openGallery('Ombre Design')">
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop&auto=format" alt="Ombre Design" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1610992015762-45b4aad6b8f5?w=500&h=500&fit=crop" alt="Ombre Design" class="gallery-image">
                 <div class="gallery-label">Ombre Design</div>
             </div>
             <div class="gallery-item" onclick="openGallery('Floral Art')">
-                <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&h=500&fit=crop&auto=format" alt="Floral Art" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&h=500&fit=crop" alt="Floral Art" class="gallery-image">
                 <div class="gallery-label">Floral Art</div>
             </div>
             <div class="gallery-item" onclick="openGallery('Glitter Glam')">
-                <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?w=500&h=500&fit=crop&auto=format" alt="Glitter Glam" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?w=500&h=500&fit=crop" alt="Glitter Glam" class="gallery-image">
                 <div class="gallery-label">Glitter Glam</div>
             </div>
             <div class="gallery-item" onclick="openGallery('3D Designs')">
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop&auto=format&q=80" alt="3D Designs" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=500&fit=crop" alt="3D Designs" class="gallery-image">
                 <div class="gallery-label">3D Designs</div>
             </div>
             <div class="gallery-item" onclick="openGallery('Chrome Nails')">
-                <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=400&h=400&fit=crop" alt="Chrome Nails" class="gallery-image">
+                <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=500&fit=crop" alt="Chrome Nails" class="gallery-image">
                 <div class="gallery-label">Chrome Nails</div>
             </div>
         </div>
     </section>
 
-    <div class="logo-section">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Crect fill='%235C3D77' width='800' height='800'/%3E%3Ctext x='400' y='280' font-family='cursive' font-size='120' fill='%23B8A0D4' text-anchor='middle' font-weight='300'%3ERakhee's%3C/text%3E%3Ctext x='400' y='380' font-family='serif' font-size='50' fill='%23FFFFFF' text-anchor='middle' letter-spacing='8'%3ENAIL ART STUDIO%3C/text%3E%3Cpath d='M 350 150 Q 380 120 410 150 Q 420 160 410 170 Q 380 200 350 170 Q 340 160 350 150 M 390 150 Q 395 145 400 150 Q 405 155 400 160 Q 395 165 390 160 Q 385 155 390 150' stroke='%23FFFFFF' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Rakhee's Nail Art Studio Logo" class="logo-image">
-    </div>
-
-    <section id="signup" class="signup-section">
-        <h2>Join Our Community</h2>
-        <p class="section-subtitle">Sign Up for Exclusive Updates</p>
-        <div class="signup-container">
-            <div class="success-message" id="successMessage">
-                ✨ Thank you for signing up! We'll be in touch soon.
-            </div>
-            <div class="error-message" id="errorMessage">
-                ❌ Something went wrong. Please try again.
-            </div>
-            <form class="signup-form" id="signupForm">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required pattern="[0-9+\s\-()]+">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email (Optional)</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
-                </div>
-                <button type="submit" class="submit-button" id="submitBtn">Sign Up Now</button>
-            </form>
-        </div>
-    </section>
-
     <section id="contact" class="contact">
-        <h2>Visit Us</h2>
-        <p class="section-subtitle">We'd Love to See You</p>
-        <div class="contact-info">
+        <div class="section-header">
+            <h2>Visit Us</h2>
+            <p>We'd love to see you</p>
+        </div>
+        <div class="contact-grid">
             <div class="contact-item">
                 <h3>Location</h3>
-                <p>Ami Zarana CHS, 204<br>Rambaug Lane Number 2, Kalyan(W)<br>Bhujbal Wadi, Rambaug<br>Kalyan, Maharashtra 421301</p>
+                <p>Ami Zarana CHS, 204<br>Rambaug Lane Number 2<br>Kalyan(W), Maharashtra 421301</p>
             </div>
             <div class="contact-item">
                 <h3>Phone</h3>
@@ -913,7 +582,7 @@
             </div>
             <div class="contact-item">
                 <h3>Hours</h3>
-                <p>Monday - Saturday: 9am - 7pm<br>Sunday: 10am - 5pm</p>
+                <p>Mon - Sat: 9am - 7pm<br>Sunday: 10am - 5pm</p>
             </div>
             <div class="contact-item">
                 <h3>Email</h3>
@@ -921,20 +590,16 @@
             </div>
         </div>
 
-        <div class="map-review-container">
+        <div class="map-review">
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d45911.73858952144!2d73.0737374357146!3d19.23373150587411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srakheenailstudio!5e1!3m2!1sen!2sin!4v1763847730585!5m2!1sen!2sin" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d45911.73858952144!2d73.0737374357146!3d19.23373150587411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srakheenailstudio!5e1!3m2!1sen!2sin!4v1763847730585!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="review-container">
+            <div class="review-box">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <h3>Share Your Experience</h3>
-                <p>Your feedback helps us grow and helps others discover the beauty we create</p>
-                <a href="https://www.google.com/search?q=Rakhee%27s+NailStudio+Kalyan+Maharashtra" target="_blank" class="review-button">Leave a Review</a>
+                <h3>Love Our Work?</h3>
+                <p>Share your experience and help others discover us</p>
+                <a href="https://www.google.com/search?q=Rakhee%27s+NailStudio+Kalyan+Maharashtra" target="_blank" class="review-btn">Leave a Review</a>
             </div>
         </div>
     </section>
@@ -943,7 +608,7 @@
         <p>&copy; 2024 Rakhee's Nail Art Studio. All Rights Reserved.</p>
     </footer>
 
-    <a href="https://wa.me/919326491223?text=Hi%20Rakhee's%20Nail%20Art%20Studio!%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"></a>
+    <a href="https://wa.me/919326491223?text=Hi%20Rakhee's%20Nail%20Art%20Studio!%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float" target="_blank"></a>
 
     <div id="galleryModal" class="modal">
         <div class="modal-content">
@@ -974,14 +639,12 @@
         }
 
         function closeGallery() {
-            const modal = document.getElementById('galleryModal');
-            modal.style.display = 'none';
+            document.getElementById('galleryModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('galleryModal');
-            if (event.target == modal) {
+            if (event.target == document.getElementById('galleryModal')) {
                 closeGallery();
             }
         }
@@ -991,58 +654,9 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        });
-
-        // Sign Up Form Handling
-        document.getElementById('signupForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const successMsg = document.getElementById('successMessage');
-            const errorMsg = document.getElementById('errorMessage');
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value || 'Not provided';
-            
-            // Disable button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Create mailto link as fallback
-            const subject = encodeURIComponent(`New Sign Up - ${name}`);
-            const body = encodeURIComponent(`
-New Customer Sign Up from Rakhee's Nail Art Studio Website
-
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-
-Date: ${new Date().toLocaleString()}
-            `);
-            
-            // For now, use mailto until Formspree is set up
-            window.location.href = `mailto:paryushj14@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Show success message
-            successMsg.style.display = 'block';
-            errorMsg.style.display = 'none';
-            document.getElementById('signupForm').reset();
-            
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Sign Up Now';
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMsg.style.display = 'none';
-            }, 5000);
         });
     </script>
 </body>
