@@ -356,8 +356,40 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
+            nav {
+                padding: 1rem 0;
+            }
+
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .brand {
+                font-size: 1.4rem;
+            }
+
+            .nav-menu {
+                gap: 2rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+
+            .services,
+            .gallery,
+            .contact {
+                padding: 6rem 2rem;
+            }
+
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
 
             .map-section {
@@ -367,37 +399,175 @@
 
         @media (max-width: 768px) {
             .nav-container {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .brand {
+                font-size: 1.2rem;
             }
 
             .nav-menu {
-                gap: 1.5rem;
-                font-size: 0.85rem;
+                gap: 1rem;
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 5rem 1rem 3rem;
             }
 
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 0.85rem;
+                width: 100%;
+                max-width: 300px;
             }
 
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
             }
 
-            .services-container,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .gallery-grid,
-            .modal-grid {
-                grid-template-columns: 1fr;
+            .section-desc {
+                font-size: 0.9rem;
+                margin-bottom: 3rem;
             }
 
             .services,
             .gallery,
             .contact {
-                padding: 5rem 1.5rem;
+                padding: 4rem 1rem;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .service-num {
+                font-size: 3rem;
+            }
+
+            .service h3 {
+                font-size: 1.2rem;
+            }
+
+            .service p {
+                font-size: 0.9rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+
+            .gallery-overlay {
+                font-size: 0.85rem;
+                padding: 1rem 0.75rem 0.5rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-box h3 {
+                font-size: 1.2rem;
+            }
+
+            .contact-box p {
+                font-size: 0.9rem;
+            }
+
+            .map iframe {
+                height: 300px;
+            }
+
+            .review-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .review-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .review-card p {
+                font-size: 0.9rem;
+            }
+
+            .review-btn {
+                padding: 0.9rem 2rem;
+                font-size: 0.85rem;
+            }
+
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 28px;
+            }
+
+            .modal-content {
+                padding: 2rem 1rem;
+                margin: 5% auto;
+            }
+
+            .modal-close {
+                top: 1rem;
+                right: 1rem;
+                font-size: 2.5rem;
+            }
+
+            .modal h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .modal-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .nav-menu {
+                gap: 0.75rem;
+                font-size: 0.7rem;
+            }
+
+            .gallery-grid {
+                gap: 0.3rem;
+            }
+
+            .gallery-overlay {
+                font-size: 0.75rem;
+                padding: 0.75rem 0.5rem 0.25rem;
             }
         }
     </style>
@@ -483,6 +653,18 @@
                 <div class="gallery-item" onclick="openModal('Chrome Nails')">
                     <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=500&fit=crop" class="gallery-img" alt="Chrome">
                     <div class="gallery-overlay">Chrome Nails</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('Marble Nails')">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop" class="gallery-img" alt="Marble">
+                    <div class="gallery-overlay">Marble Nails</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('Matte Finish')">
+                    <img src="https://images.unsplash.com/photo-1610992015762-45b4aad6b8f5?w=500&h=500&fit=crop" class="gallery-img" alt="Matte">
+                    <div class="gallery-overlay">Matte Finish</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('Seasonal')">
+                    <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=500&h=500&fit=crop" class="gallery-img" alt="Seasonal">
+                    <div class="gallery-overlay">Seasonal</div>
                 </div>
             </div>
         </div>
@@ -571,6 +753,7 @@
     </script>
 </body>
 </html>
+
 
 
 
