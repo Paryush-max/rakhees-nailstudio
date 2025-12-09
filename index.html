@@ -3,8 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakhee's NailStudio - Premium Nail Art Services</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Rakhee's NailStudio | Best Nail Extensions & Nail Art in Kalyan, Thane | Gel X & Press-Ons</title>
+    <meta name="description" content="Rakhee's NailStudio - Premium nail extensions, nail art, cateye nails, press-ons & Gel X in Kalyan, Thane, Maharashtra. Expert nail services with beautiful designs. Book your appointment today!">
+    <meta name="keywords" content="nail extensions kalyan, nail art kalyan, cateye nails thane, press-ons kalyan, gel x kalyan, nail salon thane, bridal nails kalyan, nail studio thane, best nail art kalyan, rakhees nailstudio">
+    <meta name="author" content="Rakhee's NailStudio">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Kalyan, Thane, Maharashtra">
+    <meta name="geo.position" content="19.2403;73.1305">
+    <meta name="ICBM" content="19.2403, 73.1305">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rakhee's NailStudio - Best Nail Art in Kalyan, Thane">
+    <meta property="og:description" content="Premium nail extensions, nail art, cateye nails, press-ons & Gel X in Kalyan. Expert nail services with beautiful designs. Book your appointment today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rakheesnailstudio.com">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Rakhee's NailStudio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rakhee's NailStudio - Best Nail Art in Kalyan, Thane">
+    <meta name="twitter:description" content="Premium nail extensions, nail art, cateye nails, press-ons & Gel X in Kalyan. Book your appointment today!">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.rakheesnailstudio.com">
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Structured Data - Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Rakhee's NailStudio",
+        "description": "Premium nail extensions, nail art, cateye nails, press-ons and Gel X services in Kalyan, Thane, Maharashtra",
+        "image": "https://www.rakheesnailstudio.com/logo.png",
+        "url": "https://www.rakheesnailstudio.com",
+        "telephone": "+919326491223",
+        "priceRange": "₹₹",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kalyan",
+            "addressLocality": "Kalyan",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN",
+            "postalCode": "421301"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 19.2403,
+            "longitude": 73.1305
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "10:00",
+                "closes": "20:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.google.com/maps?cid=12345678901234567890"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Nail Care Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Nail Extensions",
+                        "description": "Professional nail extension services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Nail Art",
+                        "description": "Creative nail art designs"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cateye Nails",
+                        "description": "Mesmerizing cateye effect nails"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Press-Ons",
+                        "description": "Quick and convenient press-on nails"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Gel X",
+                        "description": "Premium Gel X nail extensions"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "50"
+        }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -122,6 +244,19 @@
             margin-bottom: 2rem;
         }
 
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
         .cta-btn {
             display: inline-flex;
             align-items: center;
@@ -134,6 +269,8 @@
             font-weight: 600;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
         }
 
         .cta-btn:hover {
@@ -306,7 +443,6 @@
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s;
-            margin-top: 2rem;
         }
 
         .review-btn:hover {
@@ -379,6 +515,20 @@
             .section-title {
                 font-size: 2rem;
             }
+            
+            .cta-btn {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .review-btn {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -386,12 +536,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Rakhee's <span>NailStudio</span></div>
+            <h1 class="logo">Rakhee's <span>NailStudio</span></h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#address">Address</a></li>
+                <li><a href="#address">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -400,11 +550,19 @@
     <section id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Beautiful Nails, <span>Beautiful You</span></h1>
-                <p>Experience premium nail art services in a luxurious and relaxing environment. Your nails deserve the best care.</p>
-                <a href="https://wa.me/919326491223?text=Hi%20Rakhee,%20I%20would%20like%20to%20book%20an%20appointment" class="cta-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Book an Appointment
-                </a>
+                <div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i> Kalyan, Thane, Maharashtra
+                </div>
+                <h2 style="font-size: 4rem; color: var(--secondary); margin-bottom: 1rem; line-height: 1.2;">Beautiful Nails, <span style="color: var(--primary);">Beautiful You</span></h2>
+                <p>Experience premium nail art services in Kalyan's most luxurious nail studio. Expert nail extensions, nail art, cateye nails, press-ons & Gel X designs.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <a href="https://wa.me/919326491223?text=Hi%20Rakhee,%20I%20would%20like%20to%20book%20an%20appointment" class="cta-btn" target="_blank" rel="noopener" aria-label="Book appointment on WhatsApp">
+                        <i class="fab fa-whatsapp"></i> Book an Appointment
+                    </a>
+                    <a href="https://g.page/r/CcidDT5vq4GpEBE/review" class="review-btn" target="_blank" rel="noopener" aria-label="Leave a Google review">
+                        <i class="fas fa-star"></i> Leave a Review
+                    </a>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="" alt="" style="display:none;">
@@ -416,51 +574,100 @@
     <section id="services">
         <h2 class="section-title">Our <span>Services</span></h2>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">💅</div>
-                <h3>Manicure</h3>
-                <p>Professional manicure services with premium products for beautiful, healthy nails.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🦶</div>
-                <h3>Pedicure</h3>
-                <p>Relaxing pedicure treatments that leave your feet feeling refreshed and rejuvenated.</p>
-            </div>
-            <div class="service-card">
+            <article class="service-card">
+                <div class="service-icon">💎</div>
+                <h3>Nail Extensions</h3>
+                <p>Long-lasting, durable nail extensions in Kalyan for elegant and stunning nails that last.</p>
+            </article>
+            <article class="service-card">
                 <div class="service-icon">✨</div>
                 <h3>Nail Art</h3>
-                <p>Custom nail art designs that express your unique style and personality.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">💎</div>
-                <h3>Gel Extensions</h3>
-                <p>Long-lasting gel extensions for elegant, durable, and stunning nails.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🌸</div>
-                <h3>Spa Treatment</h3>
-                <p>Luxurious spa treatments to pamper your hands and feet.</p>
-            </div>
-            <div class="service-card">
+                <p>Creative and unique nail art designs in Kalyan that express your personality and style.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">👁️</div>
+                <h3>Cateye Nails</h3>
+                <p>Mesmerizing cateye effect nails with stunning magnetic polish for a glamorous look.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">💅</div>
+                <h3>Press-Ons</h3>
+                <p>Quick and convenient press-on nails in Thane with beautiful designs for instant glam.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">🌟</div>
+                <h3>Gel X</h3>
+                <p>Premium Gel X nail extensions in Kalyan - soft, flexible, and damage-free for natural-looking nails.</p>
+            </article>
+            <article class="service-card">
                 <div class="service-icon">👰</div>
-                <h3>Bridal Services</h3>
-                <p>Special bridal packages for your perfect wedding day look.</p>
-            </div>
+                <h3>Bridal Nails</h3>
+                <p>Special bridal nail packages in Kalyan for your perfect wedding day with stunning designs.</p>
+            </article>
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery">
         <h2 class="section-title">Our <span>Gallery</span></h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #666;">Click on any service to view our stunning work</p>
         <div class="gallery-grid">
-            <div class="gallery-item">💅</div>
-            <div class="gallery-item">✨</div>
-            <div class="gallery-item">💎</div>
-            <div class="gallery-item">🌸</div>
-            <div class="gallery-item">🎨</div>
-            <div class="gallery-item">👑</div>
+            <div class="gallery-item" onclick="openGallery('Nail Extensions')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">💎</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Nail Extensions</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Nail Art')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">✨</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Nail Art</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Cateye Nails')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">👁️</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Cateye Nails</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Press-Ons')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">💅</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Press-Ons</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Gel X')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🌟</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Gel X</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery('Bridal Nails')" style="cursor: pointer;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">👰</div>
+                    <h3 style="color: white; font-size: 1.5rem;">Bridal Nails</h3>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; overflow-y: auto;">
+        <div style="position: relative; max-width: 1200px; margin: 2rem auto; padding: 2rem;">
+            <button onclick="closeGallery()" style="position: fixed; top: 20px; right: 20px; background: var(--primary); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 2001; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                ×
+            </button>
+            <h2 id="modalTitle" style="color: var(--primary); text-align: center; margin-bottom: 2rem; font-size: 2.5rem;"></h2>
+            <div id="modalContent" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <!-- Images will be loaded here -->
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/919326491223?text=Hi%20Rakhee,%20I%20would%20like%20to%20book%20this%20service" class="cta-btn" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Book This Service
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Address Section -->
     <section id="address">
@@ -473,14 +680,16 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <strong>Location</strong><br>
-                            Kalyān, Maharashtra, IN
+                            Rakhee's NailStudio<br>
+                            Kalyan, Thane<br>
+                            Maharashtra 421301
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Phone</strong><br>
-                            +91 93264 91223
+                            <a href="tel:+919326491223" style="color: var(--text); text-decoration: none;">+91 93264 91223</a>
                         </div>
                     </div>
                     <div class="info-item">
@@ -493,29 +702,98 @@
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120615.72236862819!2d73.05260082634651!3d19.243489599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7951e8b4e1f43%3A0x2b5e87b1ea39b1a0!2sKalyan%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120615.72236862819!2d73.05260082634651!3d19.243489599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7951e8b4e1f43%3A0x2b5e87b1ea39b1a0!2sKalyan%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Rakhee's NailStudio Location in Kalyan"></iframe>
                 </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="https://g.page/r/CcidDT5vq4GpEBE/review" class="review-btn" target="_blank">
-                    <i class="fas fa-star"></i> Leave a Review on Google
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Rakhee's NailStudio. All Rights Reserved.</p>
-        <p>Crafted with ❤️ for Beautiful Nails</p>
+        <p>&copy; 2024 Rakhee's NailStudio - Best Nail Extensions & Nail Art in Kalyan, Thane, Maharashtra</p>
+        <p>Premium Nail Extensions, Nail Art, Cateye Nails, Press-Ons, Gel X & Bridal Services</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Crafted with ❤️ for Beautiful Nails</p>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919326491223" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919326491223" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
+        // Gallery data - Add your image URLs here
+        const galleryData = {
+            'Nail Extensions': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Nail+Extensions+1', alt: 'Nail Extensions Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Nail+Extensions+2', alt: 'Nail Extensions Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Nail+Extensions+3', alt: 'Nail Extensions Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Nail+Extensions+4', alt: 'Nail Extensions Design 4' }
+            ],
+            'Nail Art': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Nail+Art+1', alt: 'Nail Art Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Nail+Art+2', alt: 'Nail Art Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Nail+Art+3', alt: 'Nail Art Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Nail+Art+4', alt: 'Nail Art Design 4' }
+            ],
+            'Cateye Nails': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Cateye+Nails+1', alt: 'Cateye Nails Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Cateye+Nails+2', alt: 'Cateye Nails Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Cateye+Nails+3', alt: 'Cateye Nails Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Cateye+Nails+4', alt: 'Cateye Nails Design 4' }
+            ],
+            'Press-Ons': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Press-Ons+1', alt: 'Press-Ons Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Press-Ons+2', alt: 'Press-Ons Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Press-Ons+3', alt: 'Press-Ons Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Press-Ons+4', alt: 'Press-Ons Design 4' }
+            ],
+            'Gel X': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Gel+X+1', alt: 'Gel X Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Gel+X+2', alt: 'Gel X Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Gel+X+3', alt: 'Gel X Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Gel+X+4', alt: 'Gel X Design 4' }
+            ],
+            'Bridal Nails': [
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Bridal+Nails+1', alt: 'Bridal Nails Design 1' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Bridal+Nails+2', alt: 'Bridal Nails Design 2' },
+                { url: 'https://via.placeholder.com/400x500/d4af37/ffffff?text=Bridal+Nails+3', alt: 'Bridal Nails Design 3' },
+                { url: 'https://via.placeholder.com/400x500/c49b2d/ffffff?text=Bridal+Nails+4', alt: 'Bridal Nails Design 4' }
+            ]
+        };
+
+        function openGallery(service) {
+            const modal = document.getElementById('galleryModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalTitle.textContent = service;
+            modalContent.innerHTML = '';
+            
+            const images = galleryData[service];
+            images.forEach(img => {
+                const imgElement = document.createElement('div');
+                imgElement.innerHTML = `
+                    <img src="${img.url}" alt="${img.alt}" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                `;
+                modalContent.appendChild(imgElement);
+            });
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('galleryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeGallery();
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -553,6 +831,7 @@
     </script>
 </body>
 </html>
+
 
 
 
