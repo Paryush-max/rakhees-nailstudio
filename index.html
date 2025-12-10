@@ -546,18 +546,47 @@
             text-align: center;
             transition: all 0.3s;
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), #f0c14b);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: white;
         }
 
         .service-icon {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), #f0c14b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         .service-card h3 {
@@ -599,9 +628,44 @@
             animation: pulse-border 2s ease-in-out infinite;
         }
 
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
         .gallery-item:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .gallery-item > div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-item .service-number {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 auto 1rem;
         }
 
         @keyframes pulse-border {
@@ -619,11 +683,13 @@
             font-size: 4rem;
             color: white;
             margin-bottom: 1rem;
+            display: none;
         }
 
         .gallery-item h3 {
             color: white;
             font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         /* Address Section */
@@ -990,32 +1056,32 @@
         <h2 class="section-title fade-in">Our <span>Services</span></h2>
         <div class="services-grid">
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-gem"></i></div>
+                <div class="service-icon">NE</div>
                 <h3>Nail Extensions</h3>
                 <p>Long-lasting, durable nail extensions in Kalyan for elegant and stunning nails that last.</p>
             </article>
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <div class="service-icon">NA</div>
                 <h3>Nail Art</h3>
                 <p>Creative and unique nail art designs in Kalyan that express your personality and style.</p>
             </article>
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-eye"></i></div>
+                <div class="service-icon">CE</div>
                 <h3>Cateye Nails</h3>
                 <p>Mesmerizing cateye effect nails with stunning magnetic polish for a glamorous look.</p>
             </article>
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="service-icon">PO</div>
                 <h3>Press-Ons</h3>
                 <p>Quick and convenient press-on nails in Thane with beautiful designs for instant glam.</p>
             </article>
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-magic"></i></div>
+                <div class="service-icon">GX</div>
                 <h3>Gel X</h3>
                 <p>Premium Gel X nail extensions in Kalyan - soft, flexible, and damage-free for natural-looking nails.</p>
             </article>
             <article class="service-card fade-in">
-                <div class="service-icon"><i class="fas fa-ring"></i></div>
+                <div class="service-icon">BN</div>
                 <h3>Bridal Nails</h3>
                 <p>Special bridal nail packages in Kalyan for your perfect wedding day with stunning designs.</p>
             </article>
@@ -1031,37 +1097,37 @@
         <div class="gallery-grid">
             <div class="gallery-item fade-in" onclick="openGallery('Nail Extensions')">
                 <div style="text-align: center;">
-                    <i class="fas fa-gem"></i>
+                    <div class="service-number">01</div>
                     <h3>Nail Extensions</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in" onclick="openGallery('Nail Art')">
                 <div style="text-align: center;">
-                    <i class="fas fa-palette"></i>
+                    <div class="service-number">02</div>
                     <h3>Nail Art</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in" onclick="openGallery('Cateye Nails')">
                 <div style="text-align: center;">
-                    <i class="fas fa-eye"></i>
+                    <div class="service-number">03</div>
                     <h3>Cateye Nails</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in" onclick="openGallery('Press-Ons')">
                 <div style="text-align: center;">
-                    <i class="fas fa-hand-holding-heart"></i>
+                    <div class="service-number">04</div>
                     <h3>Press-Ons</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in" onclick="openGallery('Gel X')">
                 <div style="text-align: center;">
-                    <i class="fas fa-magic"></i>
+                    <div class="service-number">05</div>
                     <h3>Gel X</h3>
                 </div>
             </div>
             <div class="gallery-item fade-in" onclick="openGallery('Bridal Nails')">
                 <div style="text-align: center;">
-                    <i class="fas fa-ring"></i>
+                    <div class="service-number">06</div>
                     <h3>Bridal Nails</h3>
                 </div>
             </div>
@@ -1297,6 +1363,7 @@
     </script>
 </body>
 </html>
+
 
 
 
