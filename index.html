@@ -1137,11 +1137,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <h1 class="logo">Rakhee's <span>NailStudio</span></h1>
+            <div class="logo">Rakhee's <span>NailStudio</span></div>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#address">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -1162,6 +1163,7 @@
         <ul>
             <li><a href="#home" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#services" onclick="toggleMobileMenu()"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="#reviews" onclick="toggleMobileMenu()"><i class="fas fa-star"></i> Reviews</a></li>
             <li><a href="#gallery" onclick="toggleMobileMenu()"><i class="fas fa-images"></i> Gallery</a></li>
             <li><a href="#address" onclick="toggleMobileMenu()"><i class="fas fa-map-marker-alt"></i> Contact</a></li>
             <li><a href="#faq" onclick="toggleMobileMenu()"><i class="fas fa-question-circle"></i> FAQ</a></li>
@@ -1227,6 +1229,18 @@
                 <h3>Bridal Nails</h3>
                 <p>Special bridal nail packages in Kalyan for your perfect wedding day with stunning designs.</p>
             </article>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section id="reviews" style="padding: 5rem 5%; background: var(--light);">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="section-title fade-in">What Our <span>Clients Say</span></h2>
+            <!-- Elfsight Google Reviews Widget -->
+            <div class="fade-in" style="max-width: 1200px; margin: 2rem auto 0;">
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-38ad6adb-c588-4259-bc4b-38afee76b2e4" data-elfsight-app-lazy></div>
+            </div>
         </div>
     </section>
 
@@ -1339,7 +1353,7 @@
         <div style="max-width: 1000px; margin: 0 auto;">
             <h2 class="section-title fade-in">Frequently Asked <span>Questions</span></h2>
             <div style="margin-top: 3rem;">
-                <details class="faq-item fade-in" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
+                <details class="faq-item fade-in" open style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
                     <summary style="font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer;">
                         <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i>
                         What nail services does Rakhee's NailStudio offer in Kalyan?
@@ -1349,7 +1363,7 @@
                     </p>
                 </details>
 
-                <details class="faq-item fade-in" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
+                <details class="faq-item fade-in" open style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
                     <summary style="font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer;">
                         <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i>
                         What are your working hours?
@@ -1359,7 +1373,7 @@
                     </p>
                 </details>
 
-                <details class="faq-item fade-in" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
+                <details class="faq-item fade-in" open style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
                     <summary style="font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer;">
                         <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i>
                         How can I book an appointment at Rakhee's NailStudio?
@@ -1369,7 +1383,7 @@
                     </p>
                 </details>
 
-                <details class="faq-item fade-in" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
+                <details class="faq-item fade-in" open style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
                     <summary style="font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer;">
                         <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i>
                         Where is Rakhee's NailStudio located?
@@ -1379,7 +1393,7 @@
                     </p>
                 </details>
 
-                <details class="faq-item fade-in" style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
+                <details class="faq-item fade-in" open style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; border-left: 4px solid var(--primary); cursor: pointer;">
                     <summary style="font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer;">
                         <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i>
                         How long does Gel X nail extensions last?
