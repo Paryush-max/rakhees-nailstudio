@@ -8,7 +8,7 @@ Allow: /
 Sitemap: https://rakhees-nailstudio.vercel.app/sitemap.xml
 
 # Crawl delay (be nice to servers)
-Crawl-delay: 10
+Crawl-delay: 0
 
 # Allow search engines to index images
 User-agent: Googlebot-Image
@@ -33,42 +33,7 @@ Disallow: /
 
 User-agent: SemrushBot
 Disallow: /
-```
 
----
-
-## 💾 **How to Create These Files:**
-
-### **Method 1: Using Notepad/TextEdit**
-
-**For sitemap.xml:**
-1. Open **Notepad** (Windows) or **TextEdit** (Mac)
-2. Copy the sitemap.xml code above
-3. Paste it
-4. Click **File → Save As**
-5. File name: `sitemap.xml` (exactly this, no .txt)
-6. **Save as type:** Select **"All Files"** (Important!)
-7. Encoding: UTF-8
-8. Click **Save**
-
-**For robots.txt:**
-1. Open **Notepad** (Windows) or **TextEdit** (Mac)
-2. Copy the robots.txt code above
-3. Paste it
-4. Click **File → Save As**
-5. File name: `robots.txt` (exactly this)
-6. **Save as type:** Select **"All Files"**
-7. Click **Save**
-
----
-
-## 📤 **How to Upload to Vercel:**
-
-### **Option A: Using GitHub (Recommended)**
-
-1. Put both files in your project **root folder** (same place as index.html):
-```
-📁 your-project-folder
 ├── index.html
 ├── sitemap.xml     ← Add here
 ├── robots.txt      ← Add here
